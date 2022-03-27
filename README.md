@@ -93,7 +93,7 @@ sudo apt-get install -y nvidia-docker2
 sudo service docker restart
 sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 ```
-應顯示
+應顯示 (沒顯示一樣請LINE我)
 ```
 Sun Mar 27 13:16:44 2022
 +-----------------------------------------------------------------------------+
@@ -115,4 +115,29 @@ Sun Mar 27 13:16:44 2022
 |=============================================================================|
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
+```
+## 4. 拉鏡像and依賴套件安裝
+
+pull image and run 
+
+--rm 容器終止後刪除容器鏡像
+
+-p 8888:8889 將主機的 8888 port 映射到容器的 8889 port
+
+-v /home/uuu/pj:/workspace/pj 將主機的 /home/uuu/pj資料夾 掛到容器的 /workspace/pj位置
+
+拉動的鏡像位置與名稱:
+nvcr.io/nvidia/pytorch:22.02-py3
+
+```
+sudo docker run --gpus all -it --rm -p 8888:8888 -v /home/uuu/pj:/workspace/pj nvcr.io/nvidia/pytorch:22.02-py3
+```
+
+依賴套件安裝
+```
+!pip install zhon
+!pip install opencc
+!pip install Flask-Cors
+!pip install transformers
+!pip install sentencepiece
 ```
