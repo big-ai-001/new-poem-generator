@@ -122,7 +122,7 @@ pull image and run
 
 --rm 容器終止後刪除容器鏡像
 
--p 8888:8889 將主機的 8888 port 映射到容器的 8889 port
+-p 8889:8888 將主機的 8889 port 映射到容器的 8888 port
 
 -v /home/uuu/pj:/workspace/pj 將主機的 /home/uuu/pj資料夾 掛到容器的 /workspace/pj位置
 
@@ -130,7 +130,7 @@ pull image and run
 nvcr.io/nvidia/pytorch:22.02-py3
 
 ```
-sudo docker run --gpus all -it --rm -p 8888:8888 -v /home/uuu/pj:/workspace/pj nvcr.io/nvidia/pytorch:22.02-py3
+sudo docker run --gpus all -it --rm -p 8889:8888 -v /home/uuu/pj:/workspace/pj nvcr.io/nvidia/pytorch:22.02-py3
 ```
 
 依賴套件安裝
