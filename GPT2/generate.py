@@ -247,4 +247,6 @@ def main(prefix, total_length):
 # if __name__ == '__main__':
 #     main()
 
-main('我只是個戲子，', 6)
+# main('我只是個戲子，', 6)
+name = input('請輸入起頭：')
+main(name, 6)
